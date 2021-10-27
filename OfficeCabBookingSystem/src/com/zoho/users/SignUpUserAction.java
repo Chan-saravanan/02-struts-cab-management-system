@@ -5,7 +5,6 @@ import com.opensymphony.xwork2.ModelDriven;
 
 public class SignUpUserAction extends ActionSupport implements ModelDriven<SignUp>{
 	private final UserAccountManager userManager;
-
 	private String actionType;
 	private SignUp signupAccount;
 	
@@ -19,11 +18,15 @@ public class SignUpUserAction extends ActionSupport implements ModelDriven<SignU
 	}
 	
 	public String createUser(){
+		System.out.println("actionType :"+actionType);
 		System.out.println(signupAccount);
 		System.out.println("Inside the create user action!");
+		if("submitted".equals(actionType)) {
+			System.out.println("Performing the submission action!");
+		}
 		return SUCCESS;
 	}
-	
+
 	public String getActionType() {
 		return actionType;
 	}

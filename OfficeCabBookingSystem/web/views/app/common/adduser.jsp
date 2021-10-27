@@ -8,13 +8,21 @@
 </head>
 <body>
 	<h3>Create user</h3>
-	<s:form method="post" action='/user/create'>
+	<s:form name="signup" id="signup" method="post" action="/user/create">
+		<s:hidden name="actionType" />
 		<s:textfield name="signupAccount.username" label="username"/>
-		<s:textfield name="signupAccount.firstname" label="firstname"/>
-		<s:textfield name="signupAccount.lastname" label="lastname"/>
+		<s:textfield name="signupAccount.firstName" label="firstname"/>
+		<s:textfield name="signupAccount.lastName" label="lastname"/>
 		<s:textfield name="signupAccount.password" label="password"/>
 		<s:textfield name="signupAccount.confirmPassword" label="confirm password"/>
-		<s:submit/>
+		<s:submit onclick="changeAction();"/>
 	</s:form>
 </body>
+<style>
+function changeAction(){
+	alert("Submitting the form!");
+	document.signup.actionType.value='submit';
+	document.signup.submit();
+}
+</style>
 </html>
