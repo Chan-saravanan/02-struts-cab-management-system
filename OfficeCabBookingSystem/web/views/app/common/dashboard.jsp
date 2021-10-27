@@ -13,7 +13,11 @@
 		<div class='header'>
 			<div>Header	</div>
 		</div>
+		
 		<div id='body' class='body'>
+		<div>
+			<a href='/user/manage'>User Management</a>
+		</div>
 		<div id = 'vehicleCardContainer' class='vehicleCardContainer'>
 			<!-- <div class='vehicleCard'>
 				<div class='vinfo'>
